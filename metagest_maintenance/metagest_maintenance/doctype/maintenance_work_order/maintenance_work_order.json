@@ -1,0 +1,239 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "MWO-.YYYY.-.#####",
+ "creation": "2026-11-03 08:12:32.922873",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "asset",
+  "asset_name",
+  "asset_location",
+  "maintenance_type",
+  "priority",
+  "date_planned",
+  "description",
+  "column_break_dcug",
+  "status",
+  "assigned_to",
+  "supervisor",
+  "start_date",
+  "completion_date",
+  "asset_repair",
+  "maintenance_cost_record",
+  "maintenance_log",
+  "section_break_qtvn",
+  "actions_performed",
+  "section_break_smmp",
+  "parts_total_cost",
+  "labour_total_cost",
+  "external_services_total",
+  "total_maintenance_cost",
+  "parts_tab",
+  "parts_and_materials",
+  "labour_tab",
+  "labour",
+  "tab_4_tab",
+  "table_beic"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "asset",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Asset",
+   "options": "Asset",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "asset.location",
+   "fieldname": "asset_location",
+   "fieldtype": "Link",
+   "label": "Asset Location",
+   "options": "Location"
+  },
+  {
+   "fieldname": "maintenance_type",
+   "fieldtype": "Select",
+   "label": "Maintenance Type",
+   "options": "Preventive Maintenance\nCorrective Maintenance\nFacilities"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "date_planned",
+   "fieldtype": "Date",
+   "label": "Date Planned"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_dcug",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nApproved\nIn Progress\nCompleted\nClosed\nCancelled"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "User"
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "options": "User"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "completion_date",
+   "fieldtype": "Date",
+   "label": "Completion Date"
+  },
+  {
+   "fieldname": "asset_repair",
+   "fieldtype": "Link",
+   "label": "Asset Repair",
+   "options": "Asset Repair"
+  },
+  {
+   "fieldname": "maintenance_cost_record",
+   "fieldtype": "Link",
+   "label": "Maintenance Cost Record",
+   "options": "Maintenance Cost Record"
+  },
+  {
+   "fieldname": "maintenance_log",
+   "fieldtype": "Link",
+   "label": "Maintenance Log",
+   "options": "Asset Maintenance Log"
+  },
+  {
+   "fieldname": "section_break_qtvn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "actions_performed",
+   "fieldtype": "Text Editor",
+   "label": "Actions Performed"
+  },
+  {
+   "fieldname": "section_break_smmp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "parts_total_cost",
+   "fieldtype": "Currency",
+   "label": "Parts Total Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "labour_total_cost",
+   "fieldtype": "Currency",
+   "label": "Labour Total Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "external_services_total",
+   "fieldtype": "Currency",
+   "label": "External Services Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_maintenance_cost",
+   "fieldtype": "Currency",
+   "label": "Total Maintenance Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "parts_tab",
+   "fieldtype": "Tab Break",
+   "label": "Parts"
+  },
+  {
+   "fieldname": "parts_and_materials",
+   "fieldtype": "Table",
+   "label": "Parts and Materials",
+   "options": "Maintenance Work Order Part"
+  },
+  {
+   "fieldname": "labour_tab",
+   "fieldtype": "Tab Break",
+   "label": "Labour"
+  },
+  {
+   "fieldname": "labour",
+   "fieldtype": "Table",
+   "label": "Labour",
+   "options": "Maintenance Work Order Labour"
+  },
+  {
+   "fieldname": "tab_4_tab",
+   "fieldtype": "Tab Break",
+   "label": "CheckList"
+  },
+  {
+   "fieldname": "table_beic",
+   "fieldtype": "Table",
+   "options": "Maintenance Work Order Checklist"
+  },
+  {
+   "fetch_from": "asset.asset_name",
+   "fieldname": "asset_name",
+   "fieldtype": "Data",
+   "label": "Asset Name"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-03 19:47:26.277112",
+ "modified_by": "Administrator",
+ "module": "Metagest Maintenance",
+ "name": "Maintenance Work Order",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-11-03 16:16:47.294069",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "task_description",
+  "mandatory",
+  "completed",
+  "completed_by",
+  "completion_date",
+  "obrservations"
+ ],
+ "fields": [
+  {
+   "fieldname": "task_description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Task Description"
+  },
+  {
+   "default": "0",
+   "fieldname": "mandatory",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Mandatory"
+  },
+  {
+   "default": "0",
+   "fieldname": "completed",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Completed"
+  },
+  {
+   "fieldname": "completed_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Completed By",
+   "options": "User"
+  },
+  {
+   "fieldname": "completion_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Completion Date"
+  },
+  {
+   "fieldname": "obrservations",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Obrservations"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-11-03 17:51:10.814083",
+ "modified_by": "Administrator",
+ "module": "Metagest Maintenance",
+ "name": "Maintenance Work Order Checklist",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

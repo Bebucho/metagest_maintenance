@@ -247,3 +247,47 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+
+# METAGEST MAINTENANCE STOCK EVENTS
+
+
+doc_events = {
+    "Purchase Receipt": {
+        "on_submit": (
+            "metagest_maintenance.maintenance_service_costing."
+            "on_purchase_receipt_change"
+        ),
+        "on_cancel": (
+            "metagest_maintenance.maintenance_service_costing."
+            "on_purchase_receipt_change"
+        ),
+    },
+    "Purchase Order": {
+        "before_cancel": (
+            "metagest_maintenance.maintenance_service_receipts."
+            "block_accepted_service_po_cancellation"
+        ),
+    },
+    "Stock Reconciliation": {
+        "before_cancel": (
+            "metagest_maintenance.metagest_maintenance.doctype."
+            "maintenance_stock_verification."
+            "maintenance_stock_verification."
+            "block_maintenance_reconciliation_cancel"
+        ),
+    },
+    "Stock Entry": {
+        "validate": "metagest_maintenance.stock_integration.validate_stock_entry",
+        "before_submit": [
+        "metagest_maintenance.stock_integration.block_maintenance_return_submission",
+        "metagest_maintenance.maintenance_picking_guard.validate_picking_issue_submission",
+    ],
+        "on_submit": "metagest_maintenance.stock_integration.on_stock_entry_submit",
+        "before_cancel": "metagest_maintenance.stock_integration.before_stock_entry_cancel",
+        "on_cancel": "metagest_maintenance.stock_integration.on_stock_entry_cancel",
+    }
+}
+
+doctype_js = {
+    "Material Request": "public/js/material_request.js",
+}

@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-11-03 14:18:55.644578",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "item_name",
+  "warehouse",
+  "uom",
+  "required_quantity",
+  "available_quantity",
+  "issued_quantity",
+  "consumed_quantity",
+  "unit_cost",
+  "total_cost",
+  "material_request",
+  "gross_issued_quantity",
+  "returned_quantity"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name"
+  },
+  {
+   "columns": 1,
+   "fieldname": "required_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Required Quantity"
+  },
+  {
+   "columns": 1,
+   "fieldname": "available_quantity",
+   "fieldtype": "Float",
+   "label": "Available Quantity"
+  },
+  {
+   "columns": 1,
+   "fieldname": "issued_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Net Issued",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "consumed_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Consumed Quantity"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "columns": 1,
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "columns": 1,
+   "fieldname": "unit_cost",
+   "fieldtype": "Currency",
+   "label": "Unit Cost"
+  },
+  {
+   "columns": 1,
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "label": "Total Cost"
+  },
+  {
+   "fieldname": "material_request",
+   "fieldtype": "Link",
+   "label": "Material Request",
+   "options": "Material Request"
+  },
+  {
+   "fieldname": "gross_issued_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Gross Issued",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "returned_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Returned",
+   "precision": "3",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-11-10 13:01:52.425755",
+ "modified_by": "Administrator",
+ "module": "Metagest Maintenance",
+ "name": "Maintenance Work Order Part",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
