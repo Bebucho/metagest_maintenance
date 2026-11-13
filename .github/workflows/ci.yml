@@ -107,7 +107,10 @@ jobs:
         working-directory: /home/runner/frappe-bench
         run: |
           bench --site test_site set-config allow_tests true
-          bench --site test_site execute "frappe.get_doc({'doctype': 'Warehouse Type', 'name': 'Transit'}).insert(ignore_if_duplicate=True)"
+          bench --site test_site execute "frappe.get_doc({'doctype': 'Warehouse Type', 'warehouse_type': 'Transit'}).insert(ignore_if_duplicate=True)"
+          bench --site test_site execute "frappe.db.commit()"
+          bench --site test_site execute "frappe.db.exists('Warehouse Type', 'Transit')"
+          bench --site test_site execute "frappe.db.exists('Warehouse Type', 'Transit') or frappe.throw('Transit Warehouse Type missing')"
           bench --site test_site run-tests --app metagest_maintenance
         env:
           TYPE: server
