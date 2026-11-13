@@ -291,3 +291,13 @@ doc_events = {
 doctype_js = {
     "Material Request": "public/js/material_request.js",
 }
+
+# Export the non-standard maintenance asset cost report
+fixtures = [
+    {
+        "dt": "Report",
+        "filters": [
+            ["name", "=", "Custos de Manutenção por Activo"]
+        ]
+    }
+]

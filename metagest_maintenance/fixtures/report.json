@@ -1,0 +1,34 @@
+[
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": "{\"filters\":[],\"fields\":[[\"name\",\"Maintenance Cost Record\"],[\"asset\",\"Maintenance Cost Record\"],[\"maintenance_type\",\"Maintenance Cost Record\"],[\"maintenance_date\",\"Maintenance Cost Record\"],[\"parts_cost\",\"Maintenance Cost Record\"],[\"labour_cost\",\"Maintenance Cost Record\"],[\"external_services_cost\",\"Maintenance Cost Record\"],[\"total_cost\",\"Maintenance Cost Record\"]],\"order_by\":\"`tabMaintenance Cost Record`.`modified` desc\",\"add_totals_row\":true,\"page_length\":20,\"column_widths\":{\"name\":120,\"asset\":120,\"maintenance_type\":120,\"maintenance_date\":120,\"parts_cost\":120,\"labour_cost\":120,\"external_services_cost\":120,\"total_cost\":120},\"group_by\":null}",
+  "letter_head": "Bancos",
+  "modified": "2026-11-03 07:49:30.238809",
+  "module": "Assets",
+  "name": "Custos de Manutenção por Activo",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Maintenance Cost Record",
+  "reference_report": null,
+  "report_name": "Custos de Manutenção por Activo",
+  "report_script": null,
+  "report_type": "Report Builder",
+  "roles": [
+   {
+    "parent": "Custos de Manutenção por Activo",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   }
+  ],
+  "timeout": 0
+ }
+]
