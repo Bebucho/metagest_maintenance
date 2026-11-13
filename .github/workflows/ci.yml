@@ -89,6 +89,7 @@ jobs:
       - name: Install
         working-directory: /home/runner/frappe-bench
         run: |
+          bench get-app --branch version-15 erpnext
           bench get-app metagest_maintenance $GITHUB_WORKSPACE
           bench setup requirements --dev
           # CI-only: disable TLS for local MariaDB service
@@ -96,6 +97,7 @@ jobs:
           chmod 600 "$HOME/.my.cnf"
           mariadb --print-defaults
           bench new-site --db-root-password root --admin-password admin test_site
+          bench --site test_site install-app erpnext
           bench --site test_site install-app metagest_maintenance
           bench build
         env:
